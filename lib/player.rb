@@ -5,7 +5,7 @@ class Player
     def initialize(full_name, monthly_cost, contract_length)
         @full_name = full_name
         @monthly_cost = 1000000
-        @contract_length = 36
+        @contract_length = contract_length
         
     end
 
