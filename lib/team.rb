@@ -18,4 +18,21 @@ class Team
     def roster
         @roster
     end
+
+    def long_term_players
+       @roster.select do |player|
+        player.contract_length / 12 > 2
+       end
+    end
+
+    def short_term_players
+        @roster.select do |player|
+         player.contract_length / 12 <= 2
+        end
+     end
+
+     def total_value
+       @roster.map(&:total_cost).sum
+     end
+
 end 
