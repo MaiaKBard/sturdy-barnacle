@@ -35,4 +35,7 @@ class Team
        @roster.map(&:total_cost).sum
      end
 
+     def details
+        {"total value" => total_value, "player count" => @roster.count}
+     end
 end 
